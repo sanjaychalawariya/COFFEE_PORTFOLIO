@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { API_URL } from '../../config';
 
 export default function AdminDashboard() {
   const [isAuthenticated, setIsAuthenticated] = useState(!!sessionStorage.getItem('adminToken'));
@@ -21,7 +22,7 @@ export default function AdminDashboard() {
     if (!isAuthenticated) return;
     const token = sessionStorage.getItem('adminToken');
 
-    fetch('/api/messages', { headers: { 'Authorization': `Bearer ${token}` } })
+    fetch(`${API_URL}/api/messages`, { headers: { 'Authorization': `Bearer ${token}` } })
       .then(res => {
         if (!res.ok) throw new Error('Unauthorized');
         return res.json();
@@ -29,7 +30,7 @@ export default function AdminDashboard() {
       .then(data => setMessages(data))
       .catch(console.error);
 
-    fetch('/api/portfolio-data')
+    fetch(`${API_URL}/api/portfolio-data`)
       .then(res => res.json())
       .then(data => setPortfolioData(JSON.stringify(data, null, 2)))
       .catch(console.error);
@@ -39,7 +40,7 @@ export default function AdminDashboard() {
     e.preventDefault();
     setAuthError('');
     try {
-      const res = await fetch('/api/auth', {
+      const res = await fetch(`${API_URL}/api/auth`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ password: passwordInput })
@@ -63,7 +64,7 @@ export default function AdminDashboard() {
       setStatus('Saving...');
       const token = sessionStorage.getItem('adminToken');
       
-      const res = await fetch('/api/portfolio-data', {
+      const res = await fetch(`${API_URL}/api/portfolio-data`, {
         method: 'PUT',
         headers: { 
           'Content-Type': 'application/json',

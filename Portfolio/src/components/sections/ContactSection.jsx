@@ -4,9 +4,10 @@ import { useInView } from '../../hooks'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { SiLeetcode } from 'react-icons/si'
 import { FiMail } from 'react-icons/fi'
+import { API_URL } from '../../config'
 
 async function sendEmail({ name, email, message }) {
-  const response = await fetch('/api/contact', {
+  const response = await fetch(`${API_URL}/api/contact`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name, email, message })

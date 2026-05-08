@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
+import { API_URL } from '../config'
 
 // ── useScrollProgress ──────────────────────────────────────────────────────────
 export function useScrollProgress() {
@@ -36,7 +37,7 @@ export function useData() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch('/api/portfolio-data')
+    fetch(`${API_URL}/api/portfolio-data`)
       .then(r => r.json())
       .then(d => { setData(d); setLoading(false) })
       .catch(e => { setError(e); setLoading(false) })

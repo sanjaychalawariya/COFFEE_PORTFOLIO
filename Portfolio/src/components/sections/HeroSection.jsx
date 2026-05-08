@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { useTypingEffect } from '../../hooks'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { SiLeetcode } from 'react-icons/si'
+import { API_URL } from '../../config'
 
 const TYPING_WORDS = [
   'Full-Stack Engineer',
@@ -111,7 +112,7 @@ export default function HeroSection({ data }) {
             <button
               onClick={async () => {
                 try {
-                  const res = await fetch('/resume')
+                  const res = await fetch(`${API_URL}/resume`)
                   const blob = await res.blob()
                   const url = window.URL.createObjectURL(blob)
                   const a = document.createElement('a')
