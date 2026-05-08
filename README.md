@@ -2,28 +2,12 @@
 
 A premium, immersive 3D portfolio website with a coffee shop aesthetic. Built with React, Three.js (@react-three/fiber), Tailwind CSS, and Framer Motion.
 
----
-
-## 🚀 Quick Start
-
-```bash
-# 1. Install dependencies
-npm install
-
-# 2. Start development server
-npm run dev
-
-# 3. Open in browser
-# → http://localhost:5173
-```
-
 ## 📦 Build for Production
 
 ```bash
 npm run build
 npm run preview
 ```
-
 ---
 
 ## 📁 Folder Structure
@@ -76,57 +60,7 @@ coffee-portfolio/
 
 ## 🎨 Customizing Your Content
 
-**All content lives in `public/data.json`** — you never need to touch UI code.
 
-### Sections you can edit:
-- `personal` — Name, title, social links, location, coffee order
-- `about` — Bio paragraphs, stats
-- `skills` — Categories with icons, colors, and skill tags
-- `projects` — Title, description, tags, links, colors
-- `experience` — Role, company, duration, highlights, tech
-- `contact` — Headline, subtext, availability, form placeholders
-
----
-
-## 🎥 How Scroll Controls the 3D Camera
-
-The magic is in `CoffeeScene.jsx`. Here's how it works:
-
-### 1. Camera Path Keyframes
-```js
-const CAMERA_PATH = [
-  { pos: [0, 2, 8],  target: [0, 0.5, 0], section: 0 },    // Hero
-  { pos: [-3, 3, 6], target: [0, 0, 0],   section: 0.15 }, // About
-  { pos: [2, 5, 4],  target: [0, 0, 0],   section: 0.3 },  // Skills
-  { pos: [4, 2, 3],  target: [0, 1, 0],   section: 0.5 },  // Projects
-  { pos: [-4, 1.5, 5],target:[0, 0, 0],   section: 0.7 },  // Experience
-  { pos: [0, 4, 10], target: [0, 0, 0],   section: 1.0 },  // Contact
-]
-```
-Each keyframe has a `section` value from `0` (top) to `1` (bottom), matching scroll progress.
-
-### 2. Interpolation
-On each frame, we find the two surrounding keyframes and interpolate between them using a smoothstep easing curve:
-```js
-const t = local * local * (3 - 2 * local) // smoothstep
-pos = lerpV3(from.pos, to.pos, t)
-```
-
-### 3. Mouse Parallax
-The camera position also responds to mouse movement for a subtle parallax:
-```js
-targetPos.set(pos[0] + mouseX * 0.3, pos[1] + mouseY * 0.2, pos[2])
-```
-
-### 4. Smooth Following
-The camera doesn't snap — it follows with `lerp` damping:
-```js
-currentPos.lerp(targetPos, delta * 2.5)
-camera.position.copy(currentPos)
-camera.lookAt(currentLook)
-```
-
----
 
 ## 🌙 Themes
 
