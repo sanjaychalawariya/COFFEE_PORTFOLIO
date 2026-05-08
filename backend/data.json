@@ -1,0 +1,140 @@
+{
+  "personal": {
+    "name": "Sanjay Chalawariya",
+    "title": "Full-Stack Software Engineer",
+    "tagline": "Brewing digital experiences, one commit at a time.",
+    "bio": "I'm a passionate 3rd-year B.Tech student and full-stack developer crafting scalable, performant applications. Like a perfect espresso shot — I believe in precision, craft, and the right blend of technologies to create something extraordinary.",
+    "email": "sanjaychalawariya.it27@gmail.com",
+    "github": "https://github.com/sanjaychalawariya",
+    "linkedin": "https://www.linkedin.com/in/sanjay-chalawariya-67a018322",
+    "leetcode": "https://leetcode.com/u/sanjaychalawariya/",
+    "location": "Jaipur, Rajasthan",
+    "avatar": "/avatar.jpg",
+    "resume": "/resume.pdf",
+    "coffeeOrder": "Triple-shot oat milk latte, no sugar"
+  },
+  "about": {
+    "headline": "Building scalable systems with data.",
+    "paragraphs": [
+      "I'm a 3rd-year B.Tech student with a strong foundation in full-stack development and a growing interest in data-driven technologies. I enjoy building web applications that are not just functional, but also efficient and user-focused.",
+      "My journey started with web development, where I worked with technologies like JavaScript, React, Node.js, and databases to create complete, end-to-end projects. Through this, I developed a solid understanding of how systems are designed and how different components work together.",
+      "Currently, I'm expanding my skill set into AI/ML and data science. I'm actively learning concepts like data analysis, machine learning models, and working with tools like Python, NumPy, Pandas, and Scikit-learn. I'm particularly interested in how data can be used to solve real-world problems and drive smarter decisions.",
+      "I'm always looking to learn, build, and grow—whether it's through projects, new technologies, or real-world challenges."
+    ],
+    "stats": [
+      {
+        "value": "10+",
+        "label": "Projects Shipped"
+      },
+      {
+        "value": "♾️",
+        "label": "Coffee Brewed"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "category": "Frontend",
+      "icon": "💻",
+      "color": "#C68642",
+      "items": [
+        "React",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "category": "Backend",
+      "icon": "⚙️",
+      "color": "#8B4513",
+      "items": [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "REST APIs",
+        "JWT Authentication"
+      ]
+    },
+    {
+      "category": "Data Science (Learning)",
+      "icon": "📊",
+      "color": "#A0856C",
+      "items": [
+        "Python",
+        "NumPy",
+        "Pandas",
+        "Matplotlib",
+        "Basic Machine Learning"
+      ]
+    },
+    {
+      "category": "Tools",
+      "icon": "🛠️",
+      "color": "#6B4226",
+      "items": [
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Postman",
+        "Linux",
+        "Jupyter"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "FoodExpress",
+      "subtitle": "Restaurant Website with Admin & Delivery Dashboard",
+      "description": "A full-stack MERN web application for a restaurant that allows customers to browse the menu, place orders. It includes a secure admin panel to manage orders, menu items, and users, along with a dedicated delivery partner dashboard for handling and updating delivery status.",
+      "tags": [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "JWT Authentication"
+      ],
+      "links": {
+        "live": "#",
+        "github": "#"
+      },
+      "image": null,
+      "featured": true,
+      "color": "#8B4513",
+      "year": 2024
+    },
+    {
+      "id": 2,
+      "title": "Personal Portfolio Website",
+      "subtitle": "Full-Stack Developer Portfolio",
+      "description": "Designed a modern, fully responsive personal portfolio to showcase projects, technical skills, and social links. Built backend services with Node.js, including a dynamic resume download feature enabling direct PDF export. Focused on clean UI/UX principles to ensure a professional and accessible user experience across all screen sizes.",
+      "tags": [
+        "React.js",
+        "Node.js",
+        "JavaScript"
+      ],
+      "links": {
+        "live": "#",
+        "github": "https://github.com/sanjaychalawariya"
+      },
+      "image": null,
+      "featured": true,
+      "color": "#C68642",
+      "year": 2025
+    }
+  ],
+  "experience": [],
+  "contact": {
+    "headline": "Let's brew something together.",
+    "subtext": "Whether you have a project in mind, want to chat about coffee, or just want to say hi — my inbox is always open. I respond to every message, usually within 24 hours (fueled by espresso).",
+    "availability": "Open to freelance projects & full-time opportunities",
+    "formPlaceholders": {
+      "name": "Your name (and coffee order?)",
+      "email": "your@email.com",
+      "message": "Tell me about your project, or your favorite coffee..."
+    }
+  }
+}
